@@ -28,6 +28,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#feedback" class="nav-link">Feedback</a></li>
+        <li><a href="#og-tag" class="nav-link">OG Tag</a></li>
       </ul>
     </div>
   </nav>
@@ -204,6 +205,102 @@
           </button>
           <p class="form-footer">
             Your information will only be used to improve the server.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OG TAG SECTION ===== -->
+  <section class="feedback og-section" id="og-tag">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge og-badge">Season 1 Veteran</span>
+        <h2>Claim Your OG Tag</h2>
+        <p>
+          If you played on ParrotPals MC during Season 1, you qualify for an exclusive 
+          <strong>OG</strong> role in Season 2. Fill out the form below to claim yours.
+        </p>
+      </div>
+
+      <div class="form-card" id="ogFormCard">
+        <!-- Success message (hidden by default) -->
+        <div class="success-message" id="ogSuccessMessage">
+          <div class="success-icon og-success-icon">&#9733;</div>
+          <h3>OG Tag Request Submitted!</h3>
+          <p>
+            We'll review your request and deliver your OG tag before Season 2 launches. 
+            See you in-game!
+          </p>
+        </div>
+
+        <!-- The form -->
+        <form class="feedback-form" id="ogForm" novalidate>
+          <input type="hidden" name="_subject" value="OG Tag Claim Request">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_template" value="table">
+
+          <!-- Minecraft Username -->
+          <div class="form-group required">
+            <label for="ogUsername">Minecraft Username</label>
+            <input type="text" id="ogUsername" name="Minecraft Username" 
+                   placeholder="e.g. Steve_123" maxlength="32" required>
+            <span class="error-msg">Please enter your Minecraft username.</span>
+          </div>
+
+          <!-- Played Season 1? -->
+          <div class="form-group required">
+            <label>Did you play on ParrotPals MC during Season 1?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="Played Season 1?" value="Yes" required>
+                <span class="radio-custom"></span>
+                Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="Played Season 1?" value="No">
+                <span class="radio-custom"></span>
+                No
+              </label>
+            </div>
+            <span class="error-msg">Please select an option.</span>
+          </div>
+
+          <!-- How long did you play -->
+          <div class="form-group">
+            <label for="ogDuration">How long did you play Season 1? <span class="optional">(optional)</span></label>
+            <textarea id="ogDuration" name="How long did you play Season 1?" 
+                      rows="2" placeholder="e.g. Played from day one, joined halfway through, etc."></textarea>
+          </div>
+
+          <!-- Favorite memory -->
+          <div class="form-group">
+            <label for="ogMemory">What was your favorite Season 1 moment? <span class="optional">(optional)</span></label>
+            <textarea id="ogMemory" name="Favorite Season 1 moment" 
+                      rows="3" placeholder="Tell us something memorable you did or experienced..."></textarea>
+          </div>
+
+          <!-- Discord -->
+          <div class="form-group">
+            <label for="ogDiscord">Discord Username <span class="optional">(optional — for tag delivery)</span></label>
+            <input type="text" id="ogDiscord" name="Discord Username" 
+                   placeholder="e.g. Player#1234">
+          </div>
+
+          <!-- Extra verification -->
+          <div class="form-group">
+            <label for="ogVerification">Anything else to help us verify you? <span class="optional">(optional)</span></label>
+            <textarea id="ogVerification" name="Verification info" 
+                      rows="3" placeholder="Screenshots, build names, friends you played with..."></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="submit-button og-submit" id="ogSubmitBtn">
+            <span class="submit-text">Claim OG Tag</span>
+            <span class="submit-spinner" id="ogSubmitSpinner"></span>
+          </button>
+          <p class="form-footer">
+            Your OG tag will be delivered before Season 2 launches.
           </p>
         </form>
       </div>

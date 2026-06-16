@@ -756,6 +756,40 @@ img { max-width: 100%; display: block; }
   margin-top: 4px;
 }
 
+/* ---------- OG Tag Section ---------- */
+.og-section::before {
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+}
+
+.og-badge {
+  background: rgba(251, 191, 36, 0.12);
+  border-color: rgba(251, 191, 36, 0.3);
+  color: var(--color-accent);
+}
+
+.og-section .section-header p strong {
+  color: var(--color-accent);
+}
+
+.og-submit {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  box-shadow: 0 4px 16px rgba(251, 191, 36, 0.3);
+}
+
+.og-submit:hover {
+  box-shadow: 0 6px 30px rgba(251, 191, 36, 0.4);
+}
+
+.og-success-icon {
+  background: rgba(251, 191, 36, 0.12);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+#ogSuccessMessage h3 {
+  color: var(--color-accent);
+}
+
 /* ============================================
    FOOTER
    ============================================ */
