@@ -13,13 +13,6 @@
   /** Change this email to send form submissions elsewhere. */
   const FORM_SUBMIT_EMAIL = 'parrotpalsbusiness@gmail.com';
 
-  /**
-   * Target launch date for the countdown timer.
-   * Format: 'YYYY-MM-DDTHH:mm:ss' in local time.
-   * Adjust this to set the correct season launch date.
-   */
-  const LAUNCH_DATE = '2026-09-01T00:00:00';
-
   // ==========================================
   // DOM REFERENCES
   // ==========================================
@@ -85,38 +78,6 @@
       }
     });
   }
-
-  // ==========================================
-  // COUNTDOWN TIMER
-  // ==========================================
-
-  var countdownTarget = new Date(LAUNCH_DATE).getTime();
-
-  function updateCountdown() {
-    var now = new Date().getTime();
-    var diff = countdownTarget - now;
-
-    if (diff <= 0) {
-      document.getElementById('countDays').textContent = '00';
-      document.getElementById('countHours').textContent = '00';
-      document.getElementById('countMinutes').textContent = '00';
-      document.getElementById('countSeconds').textContent = '00';
-      return;
-    }
-
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-    document.getElementById('countDays').textContent = String(days).padStart(2, '0');
-    document.getElementById('countHours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('countMinutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('countSeconds').textContent = String(seconds).padStart(2, '0');
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
 
   // ==========================================
   // RATING SLIDER
